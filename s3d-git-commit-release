@@ -1,0 +1,6 @@
+#!/bin/bash
+
+v=$(s3d-current-release | jq -r '.latest')
+
+git add -A
+git commit --allow-empty -m "$v"
