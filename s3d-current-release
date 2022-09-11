@@ -1,0 +1,4 @@
+#!/bin/bash
+
+v=$(grep -E '^## \[[0-9]' < CHANGELOG.md | head -n 1 | sed 's/.*\[//' | sed 's/\].*//')
+echo -e "{\"latest\": \"$v\"}"
