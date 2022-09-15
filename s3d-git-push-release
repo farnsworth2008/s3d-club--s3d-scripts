@@ -6,3 +6,4 @@ git add -A
 git commit --allow-empty -m "$v"
 git tag "$v"
 git push ssh "$v"
+git push

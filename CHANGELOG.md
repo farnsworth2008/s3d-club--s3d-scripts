@@ -1,9 +1,16 @@
-# Changelog
-All notable changes to this project will be documented in this file.
+# Changelog All notable changes to this project will be documented in this
+file.
 
 The format is based on [Keep a
 Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [4.0.0] - 2022-09-15
+### Changed
+- Filter pre-release tags
+- Automaically Push current branch when pushing a release
+- Added script to remove pre-release tags
+- `USE...` error for git-setup script
 
 ## [3.0.0] - 2022-09-11
 ### Added
@@ -17,9 +24,6 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 - Script for adding a ssh remote
 - Script for adding just a release commit without tag and push
 - Script for re-establishing main branch with delete and re-create
-
-## [2.0.1] - 2022-09-10
-### Fixed
 - Fixed bug with `s3d-git-add-and-commit`
 
 ## [2.0.0] - 2022-09-10
@@ -32,3 +36,9 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 -## [1.0.0] - 2022-09-10
 ### Added
 - Initial structure is in place
+
+## [0.0.0] - 2022-09-10
+### Added
+- The scripts project
+
+This will be where we maintain Bash scripts.

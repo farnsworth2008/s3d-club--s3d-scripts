@@ -8,7 +8,7 @@ n=1; p="$1"; name="$p";  [ -n "$p" ] || err="\$$n (name) is required"
 [ -z "$err" ] || { 
   { 
     echo -e "ERR..: $err"
-    echo -e "USE..: $(echo "$0" | sed 's/.*\///') <email> <name>"
+    echo -e "USE..: $(echo "$0" | sed 's/.*\///') <name> <email>"
     echo -e "ABOUT: Configures the Git user and create a GPG key."
   } >&2
   exit 1
