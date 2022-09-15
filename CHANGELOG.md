@@ -8,9 +8,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 ## [5.0.0] - 2022-09-15
 ### Fixed
 - Now using `v` as a tag prefix **breaking**
+- Added missing `README.md`
 
 ### Added
 - `s3d-tf-lock-update`
+- `s3d-git-fork`
 
 ## [4.0.0] - 2022-09-15
 ### Changed
