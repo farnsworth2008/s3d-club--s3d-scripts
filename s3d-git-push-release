@@ -2,8 +2,11 @@
 
 v="v$(s3d-current-release | jq -r '.latest')"
 
-git add -A
-git commit --allow-empty -m "$v"
+if [[ "$v" != $(git log -n 1 --format='%s') ]]; then
+  git add -A
+  git commit --allow-empty -m "$v"
+fi
+
 git tag "$v"
 git push ssh "$v"
 git push
