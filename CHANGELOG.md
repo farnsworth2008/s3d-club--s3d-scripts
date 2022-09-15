@@ -5,6 +5,10 @@ The format is based on [Keep a
 Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.0.0] - 2022-09-15
+### Changed
+- Now using `0.0.0-0.0.0` format for pre-release tagging **breaking**
+
 ## [5.0.0] - 2022-09-15
 ### Fixed
 - Now using `v` as a tag prefix **breaking**
