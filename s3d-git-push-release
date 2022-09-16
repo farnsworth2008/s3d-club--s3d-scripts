@@ -1,6 +1,6 @@
 #!/bin/bash
 
-v="v$(s3d-current-release | jq -r '.latest')"
+v="$(s3d-current-release | jq -r '.latest')"
 
 if [[ "$v" != $(git log -n 1 --format='%s') ]]; then
   git add -A

@@ -1,8 +1,0 @@
-#!/bin/bash
-
-set -e
-
-s3d-git-list-version-tags \
-| grep -E '\-[0-9]+\.[0-9]\.[0-9]$' \
-| sed 's/^/git push ssh :/' \
-| sh
