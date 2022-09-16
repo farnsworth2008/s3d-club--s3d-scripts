@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+rm -rf .terraform*
+
+terraform init
+
+set +e
+t='terraform providers lock -platform='
+$t darwin_amd64
+$t darwin_arm64
+$t linux_amd64
+$t linux_arm64
+$t windows_amd64
