@@ -9,4 +9,3 @@ fi
 
 git tag "$v"
 git push ssh "$v"
-git push
