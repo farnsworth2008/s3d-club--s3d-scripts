@@ -6,9 +6,10 @@ rm -rf .terraform*
 
 terraform init
 
-terraform providers lock \
-  -platform=windows_amd64 \
-  -platform=darwin_arm64 \
-  -platform=darwin_amd64 \
-  -platform=linux_amd64 \
-  -platform=linux_arm64
+set +e
+t='terraform providers lock -platform='
+$t darwin_amd64
+$t darwin_arm64
+$t linux_amd64
+$t linux_arm64
+$t windows_amd64
