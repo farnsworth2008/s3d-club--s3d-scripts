@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+s3d-flow-commit
+s3d-flow-tag

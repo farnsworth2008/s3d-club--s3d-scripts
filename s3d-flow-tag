@@ -1,0 +1,5 @@
+#!/bin/bash
+
+v="$(_s3d-semver-get | jq -r '.latest')"
+git tag -s -m release "$v"
+git push ssh "$v"
