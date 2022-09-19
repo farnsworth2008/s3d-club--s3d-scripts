@@ -1,10 +1,10 @@
 # Changes
 - This is a [CHANGES.md](https://go.s3d.club/changes/) file
 
-## [0.0.1](https://go.s3d.club/s3d-scripts/work/0.0.1)
+## [0.0.1](https://go.s3d.club/s3d-scripts/0.0.1)
 - Added initial implementation
 
-## [0.0.2-3](https://go.s3d.club/s3d-scripts/work/0.0.1)
+## [0.0.2](https://go.s3d.club/s3d-scripts/0.0.2)
 - Added `s3d-flow-commit-tag`
 - Added `s3d-flow-commit`, removed `s3d-git-add-and-commit`
 - Changed `s3d-flow-commit` to allow empty
