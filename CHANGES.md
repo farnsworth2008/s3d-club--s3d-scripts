@@ -4,7 +4,8 @@
 ## [0.0.1](https://go.s3d.club/s3d-scripts/work/0.0.1)
 - Added initial implementation
 
-## [0.0.2-1](https://go.s3d.club/s3d-scripts/work/0.0.1)
+## [0.0.2-3](https://go.s3d.club/s3d-scripts/work/0.0.1)
+- Added `s3d-flow-commit-tag`
 - Added `s3d-flow-commit`, removed `s3d-git-add-and-commit`
 - Changed `s3d-flow-commit` to allow empty
 - Fixed typo `s3d-tg-lock`; renamed as `s3d-tf-lock`
