@@ -4,11 +4,12 @@ Recently completed and planned work is tracked here.
 ## [0.0.1](.) [0.0.4](.)
 - Early releases
 
-## [0.0.5-xjad](.)
-- **TODO** Added `s3d-ssh` showing levels
+## [0.0.5-75f3](.)
 - **TODO** Added `part` output to `s3d-flow-json`
+- **TODO** Added `s3d-ssh` showing levels
 - Added `s3d-bash`
 - Added checkout of detached head
+- Added pre-release id incrementing
 - Added push to `next`
 - Changed most script names
 - Improved `README.md`

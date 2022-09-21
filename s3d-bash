@@ -2,6 +2,6 @@
 
 n=${S3D_N:-0}
 n=$(( n + 1 ))
-export S3D_PS1="\033[32ms3d-${n}$ \033[0m"
+export PS1="\033[32ms3d-${n}$ \033[0m"
 export S3D_N="$n"
 bash

@@ -1,5 +1,26 @@
 #!/bin/bash
+set -e
 
-v="$(s3d-flow-json | jq -r '.latest')"
-git tag -s -m release "$v"
-git push ssh "$v"
+
+# Loop until we are able to tag and push
+v=$(s3d-flow-json | jq -r .latest)
+v_=$(echo $v | sed 's/\./\\\./')
+n=0
+while [[ $n != 3 ]]; do
+	n=$(( n + 1 ))
+
+	# Tag, push, and if we succeed exit
+	if git tag -s -m '' "$v"; then
+		git push ssh $v
+		exit 0
+	fi
+
+	# Use sed to update CHANGES.md so we will have a new pre-release id
+	v2=$(echo $v | sed 's/-.*//')-$(uuidgen | cut -c 1-4)
+	v2_=$(echo $v2 | sed 's/\./\\\./')
+	sed -i -e 's/\['"$v_"'\]/\['"$v2_"'\]/' CHANGES.md
+	git reset HEAD^
+	s3d-flow-commit	
+	v=$v2
+	v_=$v2_
+done
