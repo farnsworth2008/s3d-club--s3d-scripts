@@ -11,5 +11,6 @@ else
   is_final=false
 fi
 
+part=${PWD##*/}
 release=$(echo $latest | sed 's/-.*//')
-echo -e "{\"release\": \"$release\",\"is_final\": \"$is_final\",\"latest\": \"$latest\", \"penultimate\": \"$penultimate\"}"
+echo -e "{\"part\": \"$part\",\"release\": \"$release\",\"is_final\": \"$is_final\",\"latest\": \"$latest\", \"penultimate\": \"$penultimate\"}"
