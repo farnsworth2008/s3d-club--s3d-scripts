@@ -1,10 +1,10 @@
-# Changes
-- This is a [CHANGES.md](https://go.s3d.club/changes/) file
+# [Changes](https://www.s3d.club/changes/)
+Recently completed and planned work is tracked here.
 
-## [0.0.1](https://go.s3d.club/s3d-scripts/0.0.1)
+## [0.0.1](.)
 - Added initial implementation
 
-## [0.0.2](https://go.s3d.club/s3d-scripts/0.0.2)
+## [0.0.2](.)
 - Added `s3d-flow-commit-tag`
 - Added `s3d-flow-commit`, removed `s3d-git-add-and-commit`
 - Changed `s3d-flow-commit` to allow empty
@@ -13,6 +13,12 @@
 - Renamed `_s3d-git-tag`; as `s3d-git-tag`
 - Renamed `s3d-git-tag` as `s3d-flow-tag`
 
-## [Next](https://go.s3d.club/s3d-scripts/next)
+## [0.0.3](.)
+- Added prerelease tracking
+
+## [0.0.4](.)
+- Fixed prerelease tracking
+
+## [Next](.)
 - **TODO** Added CI/CD
 - **TODO** Improved `README.md`
