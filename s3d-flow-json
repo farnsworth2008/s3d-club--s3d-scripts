@@ -13,4 +13,12 @@ fi
 
 part=${PWD##*/}
 release=$(echo $latest | sed 's/-.*//')
-echo -e "{\"part\": \"$part\",\"release\": \"$release\",\"is_final\": \"$is_final\",\"latest\": \"$latest\", \"penultimate\": \"$penultimate\"}"
+json=""
+json="$json{"
+json="$json  \"is_final\": \"$is_final\","
+json="$json  \"latest\": \"$latest\","
+json="$json  \"part\": \"$part\","
+json="$json  \"penultimate\": \"$penultimate\","
+json="$json  \"release\": \"$release\""
+json="$json}"
+echo -e "$json"
