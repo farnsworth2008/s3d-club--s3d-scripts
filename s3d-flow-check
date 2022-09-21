@@ -7,8 +7,8 @@ block=$(sed -e '/Next/,$d' < CHANGES.md | sed -n -e "/$v_/,\$p")
 block=$(echo "$block" | grep -v -E '^##')
 done=$(echo "$block" | grep -v -E '^- \*\*TODO\*\*' | wc -l)
 items=$(echo "$block" | grep -E '^-' | wc -l)
-commit=$"$v Changes; $done of $items completed"
-commit="$commit"$'\n\n';
-commit="$commit$block"
-git add -A
-git commit -m "$commit"
+
+if [[ done != items ]]; then
+  echo 'ERROR: not all items are done!' >&2
+  exit 1
+fi
