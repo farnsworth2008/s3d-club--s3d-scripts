@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+s3d-flow-check
+
 v=$(s3d-flow-json | jq -r .latest)
 v2=$(s3d-flow-json | jq -r .release)
 if [[ "$v" == "$v2" ]]; then
