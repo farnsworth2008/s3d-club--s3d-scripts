@@ -4,7 +4,7 @@ Recently completed and planned work is tracked here.
 ## [0.0.1](.) [0.0.4](.)
 - Early releases
 
-## [0.0.5-sadd](.)
+## [0.0.5](.)
 - Added `s3d-flow-finish`
 - Added `part` output to `s3d-flow-json`
 - Added `s3d-bash`
