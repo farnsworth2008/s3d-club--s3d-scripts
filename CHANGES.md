@@ -15,6 +15,10 @@ Recently completed and planned work is tracked here.
 - Improved `README.md`
 - Replaced `LICENSE`
 
+## [0.0.6-9809](.)
+- Fixed `s3d-flow-clean`
+- **TODO** Added `s3d-ssh` showing levels
+
 ## [Next](.)
 - **TODO** Added `s3d-ssh` showing levels
 - **TODO** Added CI/CD
