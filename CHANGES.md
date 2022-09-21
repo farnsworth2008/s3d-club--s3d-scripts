@@ -15,9 +15,11 @@ Recently completed and planned work is tracked here.
 - Improved `README.md`
 - Replaced `LICENSE`
 
-## [0.0.6-9809](.)
-- Fixed `s3d-flow-clean`
+## [0.0.6-46a0](.)
 - **TODO** Added `s3d-ssh` showing levels
+- Added sorting for the commit block
+- Fixed `s3d-flow-clean`
+- Added `-q` for the checkout of `HEAD~0` in `s3d-flow`
 
 ## [Next](.)
 - **TODO** Added `s3d-ssh` showing levels

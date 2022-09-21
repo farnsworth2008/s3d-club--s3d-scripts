@@ -3,7 +3,7 @@ set -e
 
 v=$(s3d-flow-json | jq -r '.latest')
 v_=$(echo $v | sed 's/\./\\\./')
-block=$(sed -e '/Next/,$d' < CHANGES.md | sed -n -e "/$v_/,\$p")
+block=$(sed -e '/Next/,$d' < CHANGES.md | sed -n -e "/$v_/,\$p" | sort)
 block=$(echo "$block" | grep -v -E '^##')
 done=$(echo "$block" | grep -v -E '^- \*\*TODO\*\*' | wc -l)
 items=$(echo "$block" | grep -E '^-' | wc -l)
