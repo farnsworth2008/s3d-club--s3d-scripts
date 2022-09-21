@@ -1,24 +1,21 @@
 # [Changes](https://www.s3d.club/changes/)
 Recently completed and planned work is tracked here.
 
-## [0.0.1](.)
-- Added initial implementation
+## [0.0.1](.) [0.0.4](.)
+- Early releases
 
-## [0.0.2](.)
-- Added `s3d-flow-commit-tag`
-- Added `s3d-flow-commit`, removed `s3d-git-add-and-commit`
-- Changed `s3d-flow-commit` to allow empty
-- Fixed typo `s3d-tg-lock`; renamed as `s3d-tf-lock`
-- Removed committing from `s3d-git-tag`
-- Renamed `_s3d-git-tag`; as `s3d-git-tag`
-- Renamed `s3d-git-tag` as `s3d-flow-tag`
-
-## [0.0.3](.)
-- Added prerelease tracking
-
-## [0.0.4](.)
-- Fixed prerelease tracking
+## [0.0.5-xjad](.)
+- **TODO** Added `s3d-ssh` showing levels
+- Added `s3d-bash`
+- Added checkout of detached head
+- Added push to `next`
+- Changed most script names
+- Improved `README.md`
+- Replaced `LICENSE`
 
 ## [Next](.)
 - **TODO** Added CI/CD
+- **TODO** Created `s3d-flow-finish`
+- **TODO** Created `s3d-flow-start`
 - **TODO** Improved `README.md`
+- **TODO** Removed old scripts
