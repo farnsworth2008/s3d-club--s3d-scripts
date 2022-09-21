@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+flow_branch=$1
+flow_branch=${flow_branch:-next}
+
 v=$(s3d-flow-json | jq -r .latest)
 v2=$(s3d-flow-json | jq -r .release)
 if [[ "$v" == "$v2" ]]; then
@@ -18,7 +21,7 @@ fi
 # Commit, tag and push
 s3d-flow-commit
 s3d-flow-tag
-git push ssh HEAD:next
+git push ssh HEAD:$flow_branch
 
 # Checkout a "Detatched" head
 git checkout 'HEAD~0'

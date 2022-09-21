@@ -10,5 +10,5 @@ else
   v2_=$(echo $v2 | sed 's/\./\\\./')
   sed -i -e 's/\['"$v_"'\]/\['"$v2_"'\]/' CHANGES.md
   s3d-flow-reset
-  s3d-flow
+  s3d-flow main
 fi
