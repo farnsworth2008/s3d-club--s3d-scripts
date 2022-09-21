@@ -4,9 +4,10 @@ Recently completed and planned work is tracked here.
 ## [0.0.1](.) [0.0.4](.)
 - Early releases
 
-## [0.0.5-75f3](.)
+## [0.0.5-f4c6](.)
 - **TODO** Added `part` output to `s3d-flow-json`
 - **TODO** Added `s3d-ssh` showing levels
+- **TODO** Added `s3d-flow-finish`
 - Added `s3d-bash`
 - Added checkout of detached head
 - Added pre-release id incrementing

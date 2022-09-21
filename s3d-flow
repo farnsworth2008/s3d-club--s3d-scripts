@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e
 
+v=$(s3d-flow-json | jq -r .latest)
+v2=$(s3d-flow-json | jq -r .release)
+if [[ "$v" == "$v2" ]]; then
+  echo 'ERROR: Flow not started' >&2
+  exit 1
+fi
+ 
 # Run local flow
 if [[ 's3d-scripts' != "${PWD##*/}" ]]; then
   if [ -e ./s3d-flow ]; then
