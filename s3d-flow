@@ -8,7 +8,9 @@ v=$(s3d-flow-json | jq -r .latest)
 v2=$(s3d-flow-json | jq -r .release)
 if [[ $v == $v2 ]]; then
   s3d-flow-check
-  if [[ $flow_branch != main ]]; then
+  if [[ $flow_branch == 'ssh/main' ]]; then
+    flow_branch=main
+  else
     echo 'ERROR: Flow not started' >&2
     exit 1
   fi

@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-
 # Loop until we are able to tag and push
 v=$(s3d-flow-json | jq -r .latest)
 v_=$(echo $v | sed 's/\./\\\./')
