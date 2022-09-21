@@ -6,9 +6,11 @@ flow_branch=${flow_branch:-next}
 
 v=$(s3d-flow-json | jq -r .latest)
 v2=$(s3d-flow-json | jq -r .release)
-if [[ "$v" == "$v2" ]]; then
-  echo 'ERROR: Flow not started' >&2
-  exit 1
+if [[ $v == $v2 ]]; then
+  if [[ $flow_branch != main ]]; then
+    echo 'ERROR: Flow not started' >&2
+    exit 1
+  fi
 fi
  
 # Run local flow
@@ -24,4 +26,5 @@ s3d-flow-tag
 git push ssh HEAD:$flow_branch
 
 # Checkout a "Detatched" head
-git checkout 'HEAD~0'
+git checkout HEAD~0
+
