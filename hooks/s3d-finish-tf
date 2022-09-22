@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+pre_release_count=$(grep -E ' +source .*\?ref=.*-' *.tf | wc -l)
+
+if [[ $pre_release_count != 0 ]]; then
+  echo "ERROR: $pre_release_count pre-release sources" >&2
+  exit 1
+fi

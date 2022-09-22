@@ -5,10 +5,19 @@ v=$(s3d-flow-json | jq -r '.latest')
 v_=$(echo $v | sed 's/\./\\\./')
 block=$(sed -e '/Next/,$d' < CHANGES.md | sed -n -e "/$v_/,\$p" | sort)
 block=$(echo "$block" | grep -v -E '^##')
-done=$(echo "$block" | grep -v -E '^- \*\*TODO\*\*' | wc -l)
+done=$(echo "$block"  | grep -E '^-' | grep -v -E '^- \*\*TODO\*\*' | wc -l)
 items=$(echo "$block" | grep -E '^-' | wc -l)
 commit=$"$v Changes; $done of $items completed"
 commit="$commit"$'\n\n';
 commit="$commit$block"
+
+if [[ $done -gt $items ]]; then
+  echo "ERROR: nonsense count!"
+  echo "items=$items"
+  echo "done=$done"
+  echo "$block" | nl
+  exit 1
+fi
+
 git add -A
 git commit -m "$commit"

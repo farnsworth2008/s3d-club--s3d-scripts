@@ -1,6 +1,14 @@
 #!/bin/bash
 set -e
 
+if [ -e ./s3d-finish ]; then
+  ./s3d-finish
+fi
+
+if [ -e ./main.tf ]; then
+  "$(dirname "$0")/hooks/s3d-finish-tf"
+fi
+
 s3d-flow-check
 
 v=$(s3d-flow-json | jq -r .latest)
