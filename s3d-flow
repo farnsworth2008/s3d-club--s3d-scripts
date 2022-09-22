@@ -4,6 +4,9 @@ set -e
 # We need all submodule flows to be done first
 git submodule foreach s3d-flow
 
+# We need to test first
+s3d-test
+
 # If the status is clean we are done
 if [[ 0 = $(git status --porcelain  | wc -l) ]]; then
 	echo -e 'FLOW: Status is clean' >&2

@@ -13,7 +13,13 @@ fi
 
 # If main.tf exits, we also init by running terrafom validate
 if [ -f main.tf ]; then
-  terraform init
+	log="$HOME/.s3d/logs/$(uuidgen | cut -c 1-8).log"
+  { { 
+		terraform get -update && terraform init; 
+	} > $log 2>&1; } || {
+		cat $log >&2
+		exit -1
+	}
 fi
 
 # If main.go, we run go tidy
