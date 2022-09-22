@@ -1,4 +1,4 @@
-# [Changes](https://www.s3d.club/changes/)
+# Changes
 Recently completed and planned work is tracked here.
 
 ## [0.0.1](.) [0.0.4](.)
@@ -20,7 +20,7 @@ Recently completed and planned work is tracked here.
 - Fixed `s3d-flow-clean`
 - Added `-q` for the checkout of `HEAD~0` in `s3d-flow`
 
-## [0.0.7-fda0](.)
+## [0.0.7-0d61](.)
 - Fixed count of items done
 
 ## [Next](.)
