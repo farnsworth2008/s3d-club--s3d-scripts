@@ -6,7 +6,7 @@ Recently completed and planned work is tracked here.
 - Fix `s3d-flow-clean`
 - Add `-q` for the checkout of `HEAD~0` in `s3d-flow`
 
-## [0.0.7-0746](.)
+## [0.0.7-81b7](.)
 - Fix count of items done
 - Mod `s3d-status`; handle `working tree clean` state
 - Mod `s3d-flow`; auto for submodules

@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+# Exit if this is the scripts dir
+[[ scripts != ${PWD##*/} ]] || exit 0
+
+# If a local script exists, we run it
+if [ -f ./s3d-format ]; then
+  ./s3d-format
+fi
+
+# If main.tf exits, we also init by running terrafom validate
+if [ -f main.tf ]; then
+  terraform fmt
+fi
+
+# If main.go, we run go fmt
+if [ -f main.go ]; then
+  go fmt
+fi

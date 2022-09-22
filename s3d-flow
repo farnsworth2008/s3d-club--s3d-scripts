@@ -25,13 +25,6 @@ if [[ $v == $v2 ]]; then
   fi
 fi
  
-# Run local flow
-if [[ 's3d-scripts' != "${PWD##*/}" ]]; then
-  if [ -e ./s3d-flow ]; then
-    ./s3d-flow
-  fi
-fi
-
 # Commit, tag and push
 s3d-flow-commit
 s3d-flow-tag
