@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+if [[ 0 = $(git status --porcelain  | wc -l) ]]; then
+	echo -e 'FLOW: Status is clean' >&2
+	exit 0
+fi
+
 flow_branch=$1
 flow_branch=${flow_branch:-next}
 
