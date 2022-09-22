@@ -29,5 +29,5 @@ s3d-flow-tag
 git push ssh HEAD:$flow_branch
 
 # Checkout a "Detatched" head
-git checkout HEAD~0
+git checkout -q HEAD~0
 

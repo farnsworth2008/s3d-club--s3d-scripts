@@ -20,7 +20,7 @@ Recently completed and planned work is tracked here.
 - Fixed `s3d-flow-clean`
 - Added `-q` for the checkout of `HEAD~0` in `s3d-flow`
 
-## [0.0.7-132d](.)
+## [0.0.7-fda0](.)
 - Fixed count of items done
 
 ## [Next](.)
