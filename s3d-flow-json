@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=SC2001
 set -e
 
 latest=$(
@@ -16,6 +17,7 @@ penultimate=$(
   | sed 's/\].*//'
 )
 
+# shellcheck disable=SC2001
 is_final=$(echo "$latest" | sed 's/.*-//')
 
 if [[ "$is_final" == "$latest" ]]; then
@@ -25,10 +27,9 @@ else
 fi
 
 module=$(git remote get-url ssh | sed 's/.*\///' | sed 's/\.git//')
-module=${module:-$(git remote get-url origin | sed 's/.*\///' | sed 's/\.git//')}
+module=${module:-origin_module}
 
-part=${PWD##*/}
-release=$(echo $latest | sed 's/-.*//')
+release="$(echo "$latest" | sed 's/-.*//')"
 json=""
 json="$json{"
 json="$json  \"is_final\": \"$is_final\","
