@@ -26,3 +26,6 @@ Recently completed and planned work is tracked here.
 
 ## [0.1.22](.)
 - Removed `npm` scripting from `s3d-init`
+
+## [0.1.23-1000](.)
+- Changed `s3d-test` so it now checks sort order
